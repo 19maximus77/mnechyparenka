@@ -9,7 +9,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BigDecimal weight, distance, pricePerKm;
-
         BigDecimal pricePerKg = new BigDecimal("30");
 
         Scanner scanner = new Scanner(System.in);
