@@ -16,7 +16,6 @@ public class Main {
         System.out.println("Enter the weight in kilograms or 'q, Q' for quit: ");
         String inputString = scanner.nextLine();
 
-
                 if (inputString.equals("Q") || inputString.equals("q")) {
                     System.out.println("\nBye!");
                     return;
