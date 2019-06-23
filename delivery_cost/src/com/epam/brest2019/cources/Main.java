@@ -23,7 +23,7 @@ public class Main {
 
                 } else {
                     if (inputString.isEmpty()) {
-                        System.out.println("You don't input your weight data! Please, try again!");
+                        System.out.println("Please, input your weight data!");
                         inputString = scanner.nextLine();
                     }
                     weight = new BigDecimal(inputString);
@@ -37,7 +37,7 @@ public class Main {
 
                 } else {
                     if (inputString.isEmpty()) {
-                        System.out.println("You don't input your distance data! Please, try again!");
+                        System.out.println("Please, input your distance data!");
                         inputString = scanner.nextLine();
                     }
                     distance = new BigDecimal(inputString);
