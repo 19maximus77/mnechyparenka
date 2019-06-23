@@ -51,7 +51,7 @@ public class Main {
             Properties pro = new Properties();
 
             try {
-                fis = new FileInputStream("delivery_cost/resources/data.properties");
+                fis = new FileInputStream("resources/data.properties");
                 pro.load(fis);
             } catch (IOException e) {
                 e.printStackTrace();
