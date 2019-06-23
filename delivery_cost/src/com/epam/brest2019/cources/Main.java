@@ -57,13 +57,12 @@ public class Main {
             }
 
             if (distance.compareTo(new BigDecimal(100)) == 1) {
-                //Get prices
-                pricePerKm = new BigDecimal(pro.getProperty("km.price.more100"));
+            //Get prices
+            pricePerKm = new BigDecimal(pro.getProperty("km.price.more100"));
             } else pricePerKm = new BigDecimal(pro.getProperty("km.price.less100"));
 
             BigDecimal price = weight.multiply(pricePerKg).add(distance.multiply(pricePerKm));
             System.out.println("Price = " + price);
-
         }
     }
 }
