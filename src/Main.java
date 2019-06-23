@@ -8,38 +8,40 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        BigDecimal weight = null, distance = null, pricePerKm;
+        BigDecimal weight, distance, pricePerKm;
         BigDecimal pricePerKg = new BigDecimal(30);
 
         Scanner scanner = new Scanner(System.in);
 
-            System.out.println("Enter the weight in kilograms or 'q, Q' for quit: ");
-            String inputString = scanner.nextLine();
+        System.out.println("Enter the weight in kilograms or 'q, Q' for quit: ");
+        String inputString = scanner.nextLine();
 
-            if (inputString.equals("Q") || inputString.equals("q")) {
-            System.out.println("\nBye!");
-            return;
 
-            } else {
-                if (inputString.isEmpty()) {
-                System.out.println("You don't input your weight data! Please, try again!");
-                    inputString = scanner.nextLine();
+                if (inputString.equals("Q") || inputString.equals("q")) {
+                    System.out.println("\nBye!");
+                    return;
+
+                } else {
+                    if (inputString.isEmpty()) {
+                        System.out.println("You don't input your weight data! Please, try again!");
+                        inputString = scanner.nextLine();
+                    }
                     weight = new BigDecimal(inputString);
-            }
 
-            System.out.println("Enter the distance in kilometers or 'q, Q' for quit: ");
-            inputString = scanner.nextLine();
+        System.out.println("Enter the distance in kilometers or 'q, Q' for quit: ");
+        inputString = scanner.nextLine();
 
-            if (inputString.equals("Q") || inputString.equals("q")) {
-                System.out.println("\nBye!");
-                return;
-            } else {
-                if (inputString.isEmpty()) {
-                    System.out.println("You don't input your distance data! Please, try again!");
-                    inputString = scanner.nextLine();
+                if (inputString.equals("Q") || inputString.equals("q")) {
+                    System.out.println("\nBye!");
+                    return;
+
+                } else {
+                    if (inputString.isEmpty()) {
+                        System.out.println("You don't input your distance data! Please, try again!");
+                        inputString = scanner.nextLine();
+                    }
                     distance = new BigDecimal(inputString);
                 }
-            }
 
             System.out.println("Value of weight = " + weight);
             System.out.println("Value of distance = " + distance);
@@ -56,7 +58,7 @@ public class Main {
             }
 
             if (distance.compareTo(new BigDecimal(100)) == 1) {
-                // Get prices
+                //Get prices
                 pricePerKm = new BigDecimal(pro.getProperty("km.price.more100"));
             } else pricePerKm = new BigDecimal(pro.getProperty("km.price.less100"));
 
@@ -66,3 +68,5 @@ public class Main {
         }
     }
 }
+
+
