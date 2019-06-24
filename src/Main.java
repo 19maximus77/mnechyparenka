@@ -53,8 +53,8 @@ public class Main {
             try {
                 fis = new FileInputStream("delivery_cost/resources/data.properties");
                 pro.load(fis);
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (FileNotFoundException e) {
+                System.out.println("Price datas not found!");
             }
 
             if (distance.compareTo(new BigDecimal(100)) == 1) {
